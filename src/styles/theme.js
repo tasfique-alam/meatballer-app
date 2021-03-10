@@ -17,6 +17,9 @@ const colors = {
   borderColor:'#c7c7c7',
 
 
+  off_white:'#EEF2F5',
+
+
 
   PRIMARY_4: '#465FDF',
   PRIMARY_5: '#00D57A',
