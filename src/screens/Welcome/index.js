@@ -4,7 +4,7 @@ import Block from '../../components/Block'
 import Text from '../../components/Text'
 import { welcomeSliderShadow } from "../../constant/boxShadow"
 import { BoxShadow } from "react-native-shadow"
-import { Neomorph } from 'react-native-neomorph-shadows'
+import { Neomorph, Shadow } from 'react-native-neomorph-shadows'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 const {width, height} = Dimensions.get('window')
 
@@ -47,13 +47,12 @@ export default WelcomeScreen = props => {
         <Text textColor style={styles.des}>
           {item.des}
         </Text>
-        <Neomorph
-          swapShadows
+        <Shadow
           style={styles.btnShadow}>
           <TouchableOpacity style={styles.btn}>
-            <Text center white bold>SKIP</Text>
+            <Text center size={12} white bold>SKIP</Text>
           </TouchableOpacity>
-        </Neomorph>
+        </Shadow>
       </Block>
     )
   }
@@ -68,7 +67,7 @@ export default WelcomeScreen = props => {
         </ImageBackground>
       </Block>
 
-      <Block flex={0.3} padding={[25]}>
+      <Block center flex={0.3} padding={[25]}>
 
         {/* <BoxShadow setting={welcomeSliderShadow}>
 
@@ -94,7 +93,7 @@ export default WelcomeScreen = props => {
             <Pagination
               dotsLength={entries.length}
               activeDotIndex={activeSlide}
-              containerStyle={{ position: 'absolute', left:5, bottom: 20 }}
+              containerStyle={{ position: 'absolute', left:5, bottom: 15 }}
               dotStyle={{
                 width: 10,
                 height: 10,
