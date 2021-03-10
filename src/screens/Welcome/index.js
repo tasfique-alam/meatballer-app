@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { ImageBackground, Image, Dimensions, TouchableOpacity } from "react-native"
 import Block from '../../components/Block'
 import Text from '../../components/Text'
@@ -6,34 +6,34 @@ import { welcomeSliderShadow } from "../../constant/boxShadow"
 import { BoxShadow } from "react-native-shadow"
 import { Neomorph } from 'react-native-neomorph-shadows'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
+const {width, height} = Dimensions.get('window')
 
 
 import styles from "./style"
-import { useState } from "react"
 
 
 const functionsData = [
-  { id: 1, des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor', title: 'Welcome' },
+  { id: 1, des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud', title: 'Welcome' },
   {
     id: 2,
-    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
     title: 'Address',
   },
   {
     id: 3,
-    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
     title: 'Documents',
   },
   {
     id: 4,
-    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+    des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
     title: 'Gallery',
   },
 ]
 export default WelcomeScreen = props => {
 
   const [entries, setEntries] = useState(functionsData);
-  const [activeSlide, setActiveSlide] = useState();
+  const [activeSlide, setActiveSlide] = useState(1);
 
   const _renderItem = ({ item, index }) => {
     return (
@@ -84,17 +84,17 @@ export default WelcomeScreen = props => {
               }}
               data={functionsData}
               renderItem={_renderItem}
-              sliderWidth={300}
-              itemWidth={335}
+              sliderWidth={width-40}
+              itemWidth={width-80}
               activeSlideAlignment="start"
-              inactiveSlideOpacity={1}
+              inactiveSlideOpacity={0}
               inactiveSlideScale={1}
               onSnapToItem={(index) => setActiveSlide(index)}
             />
             <Pagination
               dotsLength={entries.length}
               activeDotIndex={activeSlide}
-              containerStyle={{ position: 'absolute', left: 20, bottom: 20 }}
+              containerStyle={{ position: 'absolute', left:5, bottom: 20 }}
               dotStyle={{
                 width: 10,
                 height: 10,

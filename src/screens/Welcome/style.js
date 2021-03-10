@@ -1,5 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { colors } from '../../styles/theme';
+const {width, height} = Dimensions.get('window')
 
 
 const styles = StyleSheet.create({
@@ -29,10 +30,10 @@ const styles = StyleSheet.create({
     sliderBlock: {
         backgroundColor: colors.off_white,
         width: '100%',
-        height: 300,
+        height: 250,
         position:'relative',
         borderRadius: 15,
-        padding:30,
+        padding:20,
         // shadowColor: "#000",
         // shadowOffset: {
         //     width: 0,
@@ -52,8 +53,8 @@ const styles = StyleSheet.create({
         shadowRadius: 25.06,
         marginTop: '-60%',
         backgroundColor: colors.white,
-        width: 360,
-        height: 300,
+        width: width-50,
+        height: 250,
         // ...include most of View/Layout styles
     },
     btnShadow: {
@@ -69,8 +70,8 @@ const styles = StyleSheet.create({
         height: 35,
         position:'absolute',
         borderRadius:30,
-        bottom:-40,
-        right:40
+        bottom:-30,
+        right:20
     },
     btn:{
         width: 115,
@@ -81,8 +82,6 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         position:'absolute',
         borderRadius:30,
-        bottom:0,
-        right:0,
         elevation:10
     }
 });
