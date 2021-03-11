@@ -10,15 +10,16 @@ const styles = StyleSheet.create({
     loginContainer:{
         backgroundColor:colors.off_white,
         width:'100%',
-        borderRadius:30,
+        borderTopLeftRadius:30,
+        borderTopRightRadius:30,
         paddingHorizontal:29,
-        paddingTop:29
+        paddingVertical:29
     },
     loginText:{
         color:colors.textColor,
         fontSize:14,
         textTransform:'uppercase',
-        fontWeight:'bold'
+        fontWeight: '700'
     },
 });
 

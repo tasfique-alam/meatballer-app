@@ -24,7 +24,7 @@ export const PrimaryInput = ({ shadowStyles, placeholder, inputStyles, ...rest }
       borderRadius: 20,
       backgroundColor: colors.off_white,
       width: 300,
-      height: 35,
+      height: 45,
       flexDirection: 'row',
       alignItems:'center',
       paddingHorizontal: 24
