@@ -9,23 +9,16 @@ const colors = {
   DANGER_LIGHT: '#ff4444',
   PURPLE: '#9933CC',
   WHITE: '#fff',
-  PRIMARY: '#464bf7',
+  PRIMARY: '#DD4301',
   SECONDARY: '#00ca13',
   DARK: '#8F92A1',
   BLACK_LIGHT: '#2D2D2D',
 
+
+  
   borderColor:'#c7c7c7',
-
-
   off_white:'#EEF2F5',
-
-
-
-  PRIMARY_4: '#465FDF',
-  PRIMARY_5: '#00D57A',
-  PRIMARY_6: '#F3A928',
-  PRIMARY_7: '#550BDE',
-
+  textColor:'#193566',
 }
 
 const sizes = {
