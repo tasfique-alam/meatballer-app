@@ -20,3 +20,16 @@ export const PrimaryButton = ({ buttonStyles, shadowStyles, textStyles, btnText 
 
   );
 }
+
+export const PrimaryOutlineButton = ({ outlineBtnStyles, outlineShadowStyles, textStyles, btnText }) => {
+
+  return (
+
+    <Shadow style={[styles.outlineBtnShadow, outlineShadowStyles]}>
+      <TouchableOpacity style={[styles.outlineBtnWrapper, outlineBtnStyles]}>
+        <Text center size={12} white bold style={[styles.outlinetext, textStyles]}>{btnText}</Text>
+      </TouchableOpacity>
+    </Shadow>
+
+  );
+}

@@ -14,9 +14,9 @@ const Routes = props => {
 
         <Scene key='start' component={StartScreen} hideNavBar />
 
-        <Scene key='welcome' component={welcomeScreen} hideNavBar />
+        <Scene initial key='welcome' component={welcomeScreen} hideNavBar />
 
-        <Scene initial key='login' component={LoginScreen} hideNavBar />
+        <Scene key='login' component={LoginScreen} hideNavBar />
 
       </Scene>
     </Router>
