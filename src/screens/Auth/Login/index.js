@@ -19,11 +19,17 @@ export default LoginScreen = props => {
       <Image style={styles.logo} source={require('../../../assets/images/logo_red.png')} />
       <Block style={styles.loginContainer}>
         <Text style={styles.loginText}>login</Text>
-        <Block margin={[26,0,0]} center>
-          <PrimaryInput 
+        <Block margin={[26, 0, 0]} center>
+          <PrimaryInput
             placeholder="Email Address"
             placeholderTextColor="#97A7C3"
           />
+          <Block margin={[30.57,0,0]}>
+            <PrimaryInput
+              placeholder="Email Address"
+              placeholderTextColor="#97A7C3"
+            />
+          </Block>
         </Block>
       </Block>
     </Block>
