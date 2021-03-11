@@ -32,10 +32,12 @@ const styles = StyleSheet.create({
     sliderBlock: {
         backgroundColor: colors.off_white,
         width: '100%',
-        height: 255,
+        height: 280,
         position:'relative',
         borderRadius: 15,
-        padding:20,
+        paddingTop:30,
+        paddingBottom: 20,
+        paddingHorizontal: 25,
         // shadowColor: "#000",
         // shadowOffset: {
         //     width: 0,
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.0581,
         shadowRadius: 14.06,
-        backgroundColor: '#DD4301',
+        // backgroundColor: '#DD4301',
         width: 115,
         height: 35,
         position:'absolute',
@@ -83,8 +85,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#DD4301',
         justifyContent:'center',
         position:'absolute',
+        bottom: -25,
         borderRadius:30,
-        elevation:9,
+        elevation:7,
     }
 });
 
