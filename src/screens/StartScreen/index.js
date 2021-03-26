@@ -2,11 +2,10 @@ import React, { useState } from "react"
 import { ImageBackground, Image, Dimensions, TouchableOpacity } from "react-native"
 import Block from '../../components/Block'
 import Text from '../../components/Text'
-import { welcomeSliderShadow } from "../../constant/boxShadow"
+import { welcomeSliderShadow, btnShadow } from "../../constant/boxShadow"
 import { BoxShadow } from "react-native-shadow"
-import { Neomorph, Shadow } from 'react-native-neomorph-shadows'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
-const {width, height} = Dimensions.get('window')
+const { width, height } = Dimensions.get('window')
 
 
 import styles from "./style"
@@ -47,12 +46,12 @@ export default StartScreen = props => {
         <Text textColor style={styles.des}>
           {item.des}
         </Text>
-        <Shadow
-          style={styles.btnShadow}>
+        <BoxShadow setting={btnShadow}>
           <TouchableOpacity style={styles.btn}>
             <Text center size={12} white bold>SKIP</Text>
           </TouchableOpacity>
-        </Shadow>
+        </BoxShadow>
+
       </Block>
     )
   }
@@ -67,15 +66,11 @@ export default StartScreen = props => {
         </ImageBackground>
       </Block>
 
-      <Block center flex={0.3} padding={[25]}>
+      <Block center padding={[25]}>
 
-        {/* <BoxShadow setting={welcomeSliderShadow}>
 
-        </BoxShadow> */}
 
-        <Neomorph
-          swapShadows
-          style={styles.shadow}>
+        <BoxShadow setting={welcomeSliderShadow}>
           <Block style={styles.sliderBlock}>
             <Carousel
               ref={c => {
@@ -83,8 +78,8 @@ export default StartScreen = props => {
               }}
               data={functionsData}
               renderItem={_renderItem}
-              sliderWidth={width-40}
-              itemWidth={width-80}
+              sliderWidth={width - 40}
+              itemWidth={width - 80}
               activeSlideAlignment="start"
               inactiveSlideOpacity={0}
               inactiveSlideScale={1}
@@ -93,7 +88,7 @@ export default StartScreen = props => {
             <Pagination
               dotsLength={entries.length}
               activeDotIndex={activeSlide}
-              containerStyle={{ position: 'absolute', left:5, bottom: 15 }}
+              containerStyle={{ position: 'absolute', left: 5, bottom: 35 }}
               dotStyle={{
                 width: 10,
                 height: 10,
@@ -108,7 +103,7 @@ export default StartScreen = props => {
               inactiveDotScale={0.6}
             />
           </Block>
-        </Neomorph>
+        </BoxShadow>
       </Block>
     </Block>
 

@@ -11,7 +11,7 @@
  import Routes from './src/routes'
  
  
- 
+ console.disableYellowBox = ["Unable to symbolicate"];
  
  
  App = () => {
